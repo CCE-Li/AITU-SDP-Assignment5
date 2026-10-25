@@ -6,6 +6,7 @@ import kz.aitu.sdp.navigation.domain.Route;
 import kz.aitu.sdp.navigation.domain.Trip;
 import kz.aitu.sdp.navigation.strategy.CarStrategy;
 import kz.aitu.sdp.navigation.strategy.CycleStrategy;
+import kz.aitu.sdp.navigation.strategy.PublicTransportStrategy;
 import kz.aitu.sdp.navigation.strategy.RouteStrategy;
 import kz.aitu.sdp.navigation.strategy.WalkStrategy;
 
@@ -20,7 +21,8 @@ public final class App {
     private static final List<RouteStrategy> FAMILY = List.of(
             new WalkStrategy(),
             new CycleStrategy(),
-            new CarStrategy());
+            new CarStrategy(),
+            new PublicTransportStrategy());
 
     public static void main(String[] args) {
         Trip airportTrip = new Trip(CityMap.AITU, CityMap.AIRPORT);
